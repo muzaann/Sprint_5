@@ -13,7 +13,6 @@ class TestAuthorization:
         driver.find_element(*TestLocators.AUTH_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((TestLocators.ORDER_BUTTON)))
         assert driver.find_element(*TestLocators.ORDER_BUTTON).text == "Оформить заказ"
-        driver.quit()
 
     def test_login_personal_area(self, driver):
         driver.find_element(*TestLocators.PERSONAL_AREA).click()
@@ -22,7 +21,6 @@ class TestAuthorization:
         driver.find_element(*TestLocators.AUTH_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((TestLocators.ORDER_BUTTON)))
         assert driver.find_element(*TestLocators.ORDER_BUTTON).text == "Оформить заказ"
-        driver.quit()
 
     def test_login_link_in_registration(self, driver):
         driver.find_element(*TestLocators.PERSONAL_AREA).click()
@@ -33,7 +31,6 @@ class TestAuthorization:
         driver.find_element(*TestLocators.AUTH_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((TestLocators.ORDER_BUTTON)))
         assert driver.find_element(*TestLocators.ORDER_BUTTON).text == "Оформить заказ"
-        driver.quit()
 
     def test_login_link_in_restore_password(self, driver):
         driver.find_element(*TestLocators.AUTH_BUTTON_MAIN).click()
@@ -44,4 +41,3 @@ class TestAuthorization:
         driver.find_element(*TestLocators.AUTH_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((TestLocators.ORDER_BUTTON)))
         assert driver.find_element(*TestLocators.ORDER_BUTTON).text == "Оформить заказ"
-        driver.quit()
